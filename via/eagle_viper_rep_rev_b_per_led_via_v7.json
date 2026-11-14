@@ -1,0 +1,1061 @@
+{
+  "name": "Eagle Viper REP Rev B - RGB and DIP LEDs v7",
+  "vendorId": "0x4444",
+  "productId": "0x0010",
+  "matrix": {
+    "rows": 10,
+    "cols": 7
+  },
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Mode",
+          "showIf": "{id_firmware_version} >= 7",
+          "content": [
+            {
+              "label": "Lighting Mode",
+              "type": "dropdown",
+              "options": [
+                "Individual LEDs",
+                "QMK Lighting"
+              ],
+              "content": [
+                "id_led_control_mode",
+                0,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Individual LEDs",
+          "showIf": "{id_firmware_version} >= 7 && {id_led_control_mode} == 0",
+          "content": [
+            {
+              "label": "Test LEDs (1.5 s)",
+              "type": "button",
+              "options": [
+                1
+              ],
+              "content": [
+                "id_per_led_test",
+                0,
+                3
+              ]
+            },
+            {
+              "label": "LED 01",
+              "type": "color",
+              "content": [
+                "id_per_led_color[0]",
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "label": "LED 02",
+              "type": "color",
+              "content": [
+                "id_per_led_color[1]",
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "label": "LED 03",
+              "type": "color",
+              "content": [
+                "id_per_led_color[2]",
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "label": "LED 04",
+              "type": "color",
+              "content": [
+                "id_per_led_color[3]",
+                0,
+                1,
+                3
+              ]
+            },
+            {
+              "label": "LED 05",
+              "type": "color",
+              "content": [
+                "id_per_led_color[4]",
+                0,
+                1,
+                4
+              ]
+            },
+            {
+              "label": "LED 06",
+              "type": "color",
+              "content": [
+                "id_per_led_color[5]",
+                0,
+                1,
+                5
+              ]
+            },
+            {
+              "label": "LED 07",
+              "type": "color",
+              "content": [
+                "id_per_led_color[6]",
+                0,
+                1,
+                6
+              ]
+            },
+            {
+              "label": "LED 08",
+              "type": "color",
+              "content": [
+                "id_per_led_color[7]",
+                0,
+                1,
+                7
+              ]
+            },
+            {
+              "label": "LED 09",
+              "type": "color",
+              "content": [
+                "id_per_led_color[8]",
+                0,
+                1,
+                8
+              ]
+            },
+            {
+              "label": "LED 10",
+              "type": "color",
+              "content": [
+                "id_per_led_color[9]",
+                0,
+                1,
+                9
+              ]
+            },
+            {
+              "label": "LED 11",
+              "type": "color",
+              "content": [
+                "id_per_led_color[10]",
+                0,
+                1,
+                10
+              ]
+            },
+            {
+              "label": "LED 12",
+              "type": "color",
+              "content": [
+                "id_per_led_color[11]",
+                0,
+                1,
+                11
+              ]
+            },
+            {
+              "label": "LED 13",
+              "type": "color",
+              "content": [
+                "id_per_led_color[12]",
+                0,
+                1,
+                12
+              ]
+            },
+            {
+              "label": "LED 14",
+              "type": "color",
+              "content": [
+                "id_per_led_color[13]",
+                0,
+                1,
+                13
+              ]
+            },
+            {
+              "label": "LED 15",
+              "type": "color",
+              "content": [
+                "id_per_led_color[14]",
+                0,
+                1,
+                14
+              ]
+            },
+            {
+              "label": "LED 16",
+              "type": "color",
+              "content": [
+                "id_per_led_color[15]",
+                0,
+                1,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "label": "LED Brightness",
+          "showIf": "{id_firmware_version} >= 7 && {id_led_control_mode} == 0",
+          "content": [
+            {
+              "label": "LED 01",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[0]",
+                0,
+                4,
+                0
+              ]
+            },
+            {
+              "label": "LED 02",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[1]",
+                0,
+                4,
+                1
+              ]
+            },
+            {
+              "label": "LED 03",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[2]",
+                0,
+                4,
+                2
+              ]
+            },
+            {
+              "label": "LED 04",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[3]",
+                0,
+                4,
+                3
+              ]
+            },
+            {
+              "label": "LED 05",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[4]",
+                0,
+                4,
+                4
+              ]
+            },
+            {
+              "label": "LED 06",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[5]",
+                0,
+                4,
+                5
+              ]
+            },
+            {
+              "label": "LED 07",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[6]",
+                0,
+                4,
+                6
+              ]
+            },
+            {
+              "label": "LED 08",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[7]",
+                0,
+                4,
+                7
+              ]
+            },
+            {
+              "label": "LED 09",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[8]",
+                0,
+                4,
+                8
+              ]
+            },
+            {
+              "label": "LED 10",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[9]",
+                0,
+                4,
+                9
+              ]
+            },
+            {
+              "label": "LED 11",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[10]",
+                0,
+                4,
+                10
+              ]
+            },
+            {
+              "label": "LED 12",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[11]",
+                0,
+                4,
+                11
+              ]
+            },
+            {
+              "label": "LED 13",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[12]",
+                0,
+                4,
+                12
+              ]
+            },
+            {
+              "label": "LED 14",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[13]",
+                0,
+                4,
+                13
+              ]
+            },
+            {
+              "label": "LED 15",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[14]",
+                0,
+                4,
+                14
+              ]
+            },
+            {
+              "label": "LED 16",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_per_led_level[15]",
+                0,
+                4,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "label": "QMK Lighting",
+          "showIf": "{id_firmware_version} >= 7 && {id_led_control_mode} == 1",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgblight_brightness",
+                2,
+                1
+              ]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "options": [
+                "All Off",
+                "Solid Color",
+                "Breathing 1",
+                "Breathing 2",
+                "Breathing 3",
+                "Breathing 4",
+                "Rainbow Mood 1",
+                "Rainbow Mood 2",
+                "Rainbow Mood 3",
+                "Rainbow Swirl 1",
+                "Rainbow Swirl 2",
+                "Rainbow Swirl 3",
+                "Rainbow Swirl 4",
+                "Rainbow Swirl 5",
+                "Rainbow Swirl 6",
+                "Snake 1",
+                "Snake 2",
+                "Snake 3",
+                "Snake 4",
+                "Snake 5",
+                "Snake 6",
+                "Knight 1",
+                "Knight 2",
+                "Knight 3",
+                "Christmas",
+                "Gradient 1",
+                "Gradient 2",
+                "Gradient 3",
+                "Gradient 4",
+                "Gradient 5",
+                "Gradient 6",
+                "Gradient 7",
+                "Gradient 8",
+                "Gradient 9",
+                "Gradient 10",
+                "RGB Test",
+                "Alternating",
+                "Twinkle 1",
+                "Twinkle 2",
+                "Twinkle 3",
+                "Twinkle 4",
+                "Twinkle 5",
+                "Twinkle 6"
+              ],
+              "content": [
+                "id_qmk_rgblight_effect",
+                2,
+                2
+              ]
+            },
+            {
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "showIf": "{id_qmk_rgblight_effect} != 0",
+              "content": [
+                "id_qmk_rgblight_effect_speed",
+                2,
+                3
+              ]
+            },
+            {
+              "label": "Color",
+              "type": "color",
+              "showIf": "{id_qmk_rgblight_effect} != 0 && {id_qmk_rgblight_effect} != 35",
+              "content": [
+                "id_qmk_rgblight_color",
+                2,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "label": "DIP LEDs",
+          "showIf": "{id_firmware_version} >= 7",
+          "content": [
+            {
+              "label": "DIP 1 (LAYER_1 / B14)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[0]",
+                0,
+                6,
+                0
+              ]
+            },
+            {
+              "label": "DIP 2 (LAYER_2 / B15)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[1]",
+                0,
+                6,
+                1
+              ]
+            },
+            {
+              "label": "DIP 3 (LAYER_3 / B0)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[2]",
+                0,
+                6,
+                2
+              ]
+            },
+            {
+              "label": "DIP 4 (LAYER_4 / B9)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[3]",
+                0,
+                6,
+                3
+              ]
+            },
+            {
+              "label": "DIP 5 (LAYER_5 / A9)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[4]",
+                0,
+                6,
+                4
+              ]
+            },
+            {
+              "label": "DIP 6 (CAPS_LOCK / B1)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[5]",
+                0,
+                6,
+                5
+              ]
+            },
+            {
+              "label": "DIP 7 (NUM_LOCK / B12)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[6]",
+                0,
+                6,
+                6
+              ]
+            },
+            {
+              "label": "DIP 8 (SCROLL_LOCK / B13)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[7]",
+                0,
+                6,
+                7
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": {
+    "labels": [
+      [
+        "Bottom row",
+        "Tsangan",
+        "HHKB",
+        "Standard",
+        "Split Tsangan",
+        "Split HHKB",
+        "10U"
+      ],
+      "Unified Backspace",
+      "ISO Enter",
+      "Split Left Shift",
+      "Unified Right Shift"
+    ],
+    "keymap": [
+      [
+        {
+          "x": 3,
+          "c": "#aaaaaa"
+        },
+        "0,0",
+        {
+          "c": "#cccccc"
+        },
+        "1,0",
+        "0,1",
+        "1,1",
+        "0,2",
+        "1,2",
+        "0,3",
+        "1,3",
+        "0,4",
+        "1,4",
+        "0,5",
+        "1,5",
+        "0,6",
+        "1,6\n\n\n1,0",
+        {
+          "c": "#aaaaaa"
+        },
+        "3,6\n\n\n1,0",
+        {
+          "x": 1.5,
+          "w": 2
+        },
+        "3,6\n\n\n1,1"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.5
+        },
+        "2,0",
+        {
+          "c": "#cccccc"
+        },
+        "3,0",
+        "2,1",
+        "3,1",
+        "2,2",
+        "3,2",
+        "2,3",
+        "3,3",
+        "2,4",
+        "3,4",
+        "2,5",
+        "3,5",
+        "2,6",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "5,6\n\n\n2,0",
+        {
+          "x": 2.25,
+          "w": 1.25,
+          "h": 2,
+          "w2": 1.5,
+          "h2": 1,
+          "x2": -0.25
+        },
+        "7,6\n\n\n2,1"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.75
+        },
+        "4,0",
+        {
+          "c": "#cccccc"
+        },
+        "5,0",
+        "4,1",
+        "5,1",
+        "4,2",
+        "5,2",
+        "4,3",
+        "5,3",
+        "4,4",
+        "5,4",
+        "4,5",
+        "5,5",
+        {
+          "c": "#aaaaaa",
+          "w": 2.25
+        },
+        "7,6\n\n\n2,0",
+        {
+          "x": 1.25,
+          "c": "#cccccc"
+        },
+        "4,6\n\n\n2,1"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "6,0\n\n\n3,1",
+        "7,0\n\n\n3,1",
+        {
+          "x": 0.75,
+          "w": 2.25
+        },
+        "6,0\n\n\n3,0",
+        {
+          "c": "#cccccc"
+        },
+        "6,1",
+        "7,1",
+        "6,2",
+        "7,2",
+        "6,3",
+        "7,3",
+        "6,4",
+        "7,4",
+        "6,5",
+        "7,5",
+        {
+          "c": "#aaaaaa",
+          "w": 1.75
+        },
+        "6,6\n\n\n4,0",
+        "9,6\n\n\n4,0",
+        {
+          "x": 0.75,
+          "w": 2.75
+        },
+        "6,6\n\n\n4,1"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.5
+        },
+        "8,0\n\n\n0,0",
+        "9,0\n\n\n0,0",
+        {
+          "w": 1.5
+        },
+        "9,1\n\n\n0,0",
+        {
+          "c": "#cccccc",
+          "w": 7
+        },
+        "9,3\n\n\n0,0",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "8,5\n\n\n0,0",
+        "9,5\n\n\n0,0",
+        {
+          "w": 1.5
+        },
+        "8,6\n\n\n0,0"
+      ],
+      [
+        {
+          "y": 0.75,
+          "x": 3,
+          "w": 1.5,
+          "d": true
+        },
+        "8,0\n\n\n0,1",
+        "9,0\n\n\n0,1",
+        {
+          "w": 1.5
+        },
+        "9,1\n\n\n0,1",
+        {
+          "c": "#cccccc",
+          "w": 7
+        },
+        "9,3\n\n\n0,1",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "8,5\n\n\n0,1",
+        "9,5\n\n\n0,1",
+        {
+          "w": 1.5,
+          "d": true
+        },
+        "8,6\n\n\n0,1"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.25
+        },
+        "8,0\n\n\n0,2",
+        {
+          "w": 1.25
+        },
+        "9,0\n\n\n0,2",
+        {
+          "w": 1.25
+        },
+        "9,1\n\n\n0,2",
+        {
+          "c": "#cccccc",
+          "w": 6.25
+        },
+        "9,3\n\n\n0,2",
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "9,4\n\n\n0,2",
+        {
+          "w": 1.25
+        },
+        "8,5\n\n\n0,2",
+        {
+          "w": 1.25
+        },
+        "9,5\n\n\n0,2",
+        {
+          "w": 1.25
+        },
+        "8,6\n\n\n0,2"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.5
+        },
+        "8,0\n\n\n0,3",
+        "9,0\n\n\n0,3",
+        {
+          "w": 1.5
+        },
+        "9,1\n\n\n0,3",
+        {
+          "c": "#cccccc",
+          "w": 3
+        },
+        "9,2\n\n\n0,3",
+        "9,3\n\n\n0,3",
+        {
+          "w": 3
+        },
+        "8,4\n\n\n0,3",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "8,5\n\n\n0,3",
+        "9,5\n\n\n0,3",
+        {
+          "w": 1.5
+        },
+        "8,6\n\n\n0,3"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.5,
+          "d": true
+        },
+        "8,0\n\n\n0,4",
+        "9,0\n\n\n0,4",
+        {
+          "w": 1.5
+        },
+        "9,1\n\n\n0,4",
+        {
+          "c": "#cccccc",
+          "w": 3
+        },
+        "9,2\n\n\n0,4",
+        "9,3\n\n\n0,4",
+        {
+          "w": 3
+        },
+        "8,4\n\n\n0,4",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "8,5\n\n\n0,4",
+        "9,5\n\n\n0,4",
+        {
+          "w": 1.5,
+          "d": true
+        },
+        "8,6\n\n\n0,4"
+      ],
+      [
+        {
+          "x": 3,
+          "w": 1.5
+        },
+        "8,0\n\n\n0,5",
+        "9,0\n\n\n0,5",
+        {
+          "c": "#cccccc",
+          "w": 10
+        },
+        "9,3\n\n\n0,5",
+        {
+          "c": "#aaaaaa"
+        },
+        "9,5\n\n\n0,5",
+        {
+          "w": 1.5
+        },
+        "8,6\n\n\n0,5"
+      ]
+    ]
+  },
+  "keycodes": [
+    "qmk_rgblight_keycodes"
+  ]
+}
