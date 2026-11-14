@@ -39,26 +39,26 @@ Eagle/Viper REP **Rev B**용 QMK/VIA 펌웨어입니다. 하단 RGB LED 16개의
 | 항목 | 원본 Rev B 소스 | 이 수정본 v7 |
 | --- | --- | --- |
 | 하단 RGB LED 16개 | QMK RGBLight 효과, 전체 색상·밝기 조절 | VIA에서 LED마다 색상과 밝기 설정. `Individual LEDs`와 `QMK Lighting` 모드 선택 가능 |
-| 상단 표시 LED 8개 | 시작 시 8개 모두 켜짐 | LED마다 Caps Lock, Num Lock, Scroll Lock, Layer 0–4, On, Off 중 하나 선택 |
+| 상단 표시 LED 8개 | Lock/Layer 표시용 GPIO 정의 | LED마다 Caps Lock, Num Lock, Scroll Lock, Layer 0–4, On, Off 중 하나 선택 |
 | VIA 레이아웃 | 원본 키맵 구조 | 원본 VIA JSON의 레이아웃 이름과 선택지를 반영한 v7 JSON 제공 |
 | 설정 저장 | QMK/VIA 기본 설정 | 개별 RGB 및 상단 LED 설정을 VIA 커스텀 설정 영역에 저장 |
 
-상단 LED의 `Layer 0–4` 조건은 **현재 가장 높은 활성 레이어**가 해당 번호일 때 켜집니다. `On`과 `Off`는 항상 켜짐과 항상 꺼짐입니다. 상단 LED 8개의 초기 설정은 원본처럼 모두 `On`입니다. 개별 RGB LED 16개의 초기 밝기는 최대값 `255`입니다.
+상단 LED의 `Layer 0–4` 조건은 **현재 가장 높은 활성 레이어**가 해당 번호일 때 켜집니다. `On`과 `Off`는 항상 켜짐과 항상 꺼짐입니다. 개별 RGB LED 16개의 초기 밝기는 최대값 `255`입니다.
 
 ### 상단 LED 번호와 GPIO
 
-| VIA 메뉴 | 원본 핀 이름 | GPIO |
-| --- | --- | --- |
-| DIP 1 | `LAYER_1` | `B14` |
-| DIP 2 | `LAYER_2` | `B15` |
-| DIP 3 | `LAYER_3` | `B0` |
-| DIP 4 | `LAYER_4` | `B9` |
-| DIP 5 | `LAYER_5` | `A9` |
-| DIP 6 | `CAPS_LOCK` | `B1` |
-| DIP 7 | `NUM_LOCK` | `B12` |
-| DIP 8 | `SCROLL_LOCK` | `B13` |
+| VIA 메뉴 | 표시등 | 원본 핀 이름 | GPIO |
+| --- | --- | --- | --- |
+| DIP 1 | Caps Lock | `CAPS_LOCK` | `B1` |
+| DIP 2 | Num Lock | `NUM_LOCK` | `B12` |
+| DIP 3 | Scroll Lock | `SCROLL_LOCK` | `B13` |
+| DIP 4 | Layer 0 | `LAYER_1` | `B14` |
+| DIP 5 | Layer 1 | `LAYER_2` | `B15` |
+| DIP 6 | Layer 2 | `LAYER_3` | `B0` |
+| DIP 7 | Layer 3 | `LAYER_4` | `B9` |
+| DIP 8 | Layer 4 | `LAYER_5` | `A9` |
 
-이 번호는 펌웨어의 GPIO 순서이며 PCB에서 왼쪽부터의 순서를 뜻하지 않습니다. 실제 위치는 각 LED를 `On`/`Off`로 바꾸며 확인할 수 있습니다.
+VIA 메뉴 순서는 원본 표시등의 Caps Lock → Num Lock → Scroll Lock → Layer 0–4 순서를 따릅니다. 원본 핀 이름의 `LAYER_1`–`LAYER_5`는 각각 VIA의 Layer 0–4 표시등에 대응합니다.
 
 ## 설치 및 VIA 설정
 

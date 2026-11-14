@@ -39,26 +39,26 @@ The default USB identifiers are VID `0x4444` and PID `0x0010`. Use the **v7 firm
 | Feature | Original Rev B source | This modified v7 firmware |
 | --- | --- | --- |
 | 16 bottom RGB LEDs | QMK RGBLight effects with global color and brightness controls | Set each LED's color and brightness in VIA; switch between `Individual LEDs` and `QMK Lighting` modes |
-| Eight top indicator LEDs | All eight turn on at startup | Choose Caps Lock, Num Lock, Scroll Lock, Layer 0–4, On, or Off for each LED independently |
+| Eight top indicator LEDs | GPIO definitions for Lock/Layer indicators | Choose Caps Lock, Num Lock, Scroll Lock, Layer 0–4, On, or Off for each LED independently |
 | VIA layouts | Original keymap structure | v7 JSON includes the layout names and choices from the original VIA definition |
 | Settings | Standard QMK/VIA settings | Individual RGB and top LED settings are saved in VIA's custom configuration area |
 
-A `Layer 0–4` trigger lights its LED when that layer is the **highest active layer**. `On` and `Off` keep an LED permanently on or off. All eight top LEDs default to `On`, matching the original firmware. The default brightness for each bottom RGB LED is the maximum value, `255`.
+A `Layer 0–4` trigger lights its LED when that layer is the **highest active layer**. `On` and `Off` keep an LED permanently on or off. The default brightness for each bottom RGB LED is the maximum value, `255`.
 
 ### Top LED numbering and GPIO pins
 
-| VIA control | Original pin name | GPIO |
-| --- | --- | --- |
-| DIP 1 | `LAYER_1` | `B14` |
-| DIP 2 | `LAYER_2` | `B15` |
-| DIP 3 | `LAYER_3` | `B0` |
-| DIP 4 | `LAYER_4` | `B9` |
-| DIP 5 | `LAYER_5` | `A9` |
-| DIP 6 | `CAPS_LOCK` | `B1` |
-| DIP 7 | `NUM_LOCK` | `B12` |
-| DIP 8 | `SCROLL_LOCK` | `B13` |
+| VIA control | Indicator | Original pin name | GPIO |
+| --- | --- | --- | --- |
+| DIP 1 | Caps Lock | `CAPS_LOCK` | `B1` |
+| DIP 2 | Num Lock | `NUM_LOCK` | `B12` |
+| DIP 3 | Scroll Lock | `SCROLL_LOCK` | `B13` |
+| DIP 4 | Layer 0 | `LAYER_1` | `B14` |
+| DIP 5 | Layer 1 | `LAYER_2` | `B15` |
+| DIP 6 | Layer 2 | `LAYER_3` | `B0` |
+| DIP 7 | Layer 3 | `LAYER_4` | `B9` |
+| DIP 8 | Layer 4 | `LAYER_5` | `A9` |
 
-These numbers follow the firmware's GPIO order; they do not necessarily run from left to right on the PCB. Toggle each control between `On` and `Off` to identify the physical LED.
+The VIA menu follows the original indicator order: Caps Lock → Num Lock → Scroll Lock → Layer 0–4. The original pin names `LAYER_1`–`LAYER_5` correspond to VIA's Layer 0–4 indicators.
 
 ## Flashing and VIA setup
 

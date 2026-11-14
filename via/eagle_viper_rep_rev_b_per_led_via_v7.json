@@ -539,117 +539,7 @@
           "showIf": "{id_firmware_version} >= 7",
           "content": [
             {
-              "label": "DIP 1 (LAYER_1 / B14)",
-              "type": "dropdown",
-              "options": [
-                "Caps Lock",
-                "Num Lock",
-                "Scroll Lock",
-                "Layer 0",
-                "Layer 1",
-                "Layer 2",
-                "Layer 3",
-                "Layer 4",
-                "On",
-                "Off"
-              ],
-              "content": [
-                "id_dip_led_mode[0]",
-                0,
-                6,
-                0
-              ]
-            },
-            {
-              "label": "DIP 2 (LAYER_2 / B15)",
-              "type": "dropdown",
-              "options": [
-                "Caps Lock",
-                "Num Lock",
-                "Scroll Lock",
-                "Layer 0",
-                "Layer 1",
-                "Layer 2",
-                "Layer 3",
-                "Layer 4",
-                "On",
-                "Off"
-              ],
-              "content": [
-                "id_dip_led_mode[1]",
-                0,
-                6,
-                1
-              ]
-            },
-            {
-              "label": "DIP 3 (LAYER_3 / B0)",
-              "type": "dropdown",
-              "options": [
-                "Caps Lock",
-                "Num Lock",
-                "Scroll Lock",
-                "Layer 0",
-                "Layer 1",
-                "Layer 2",
-                "Layer 3",
-                "Layer 4",
-                "On",
-                "Off"
-              ],
-              "content": [
-                "id_dip_led_mode[2]",
-                0,
-                6,
-                2
-              ]
-            },
-            {
-              "label": "DIP 4 (LAYER_4 / B9)",
-              "type": "dropdown",
-              "options": [
-                "Caps Lock",
-                "Num Lock",
-                "Scroll Lock",
-                "Layer 0",
-                "Layer 1",
-                "Layer 2",
-                "Layer 3",
-                "Layer 4",
-                "On",
-                "Off"
-              ],
-              "content": [
-                "id_dip_led_mode[3]",
-                0,
-                6,
-                3
-              ]
-            },
-            {
-              "label": "DIP 5 (LAYER_5 / A9)",
-              "type": "dropdown",
-              "options": [
-                "Caps Lock",
-                "Num Lock",
-                "Scroll Lock",
-                "Layer 0",
-                "Layer 1",
-                "Layer 2",
-                "Layer 3",
-                "Layer 4",
-                "On",
-                "Off"
-              ],
-              "content": [
-                "id_dip_led_mode[4]",
-                0,
-                6,
-                4
-              ]
-            },
-            {
-              "label": "DIP 6 (CAPS_LOCK / B1)",
+              "label": "DIP 1 (Caps Lock / B1)",
               "type": "dropdown",
               "options": [
                 "Caps Lock",
@@ -671,7 +561,7 @@
               ]
             },
             {
-              "label": "DIP 7 (NUM_LOCK / B12)",
+              "label": "DIP 2 (Num Lock / B12)",
               "type": "dropdown",
               "options": [
                 "Caps Lock",
@@ -693,7 +583,7 @@
               ]
             },
             {
-              "label": "DIP 8 (SCROLL_LOCK / B13)",
+              "label": "DIP 3 (Scroll Lock / B13)",
               "type": "dropdown",
               "options": [
                 "Caps Lock",
@@ -712,6 +602,116 @@
                 0,
                 6,
                 7
+              ]
+            },
+            {
+              "label": "DIP 4 (Layer 0 / B14)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[0]",
+                0,
+                6,
+                0
+              ]
+            },
+            {
+              "label": "DIP 5 (Layer 1 / B15)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[1]",
+                0,
+                6,
+                1
+              ]
+            },
+            {
+              "label": "DIP 6 (Layer 2 / B0)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[2]",
+                0,
+                6,
+                2
+              ]
+            },
+            {
+              "label": "DIP 7 (Layer 3 / B9)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[3]",
+                0,
+                6,
+                3
+              ]
+            },
+            {
+              "label": "DIP 8 (Layer 4 / A9)",
+              "type": "dropdown",
+              "options": [
+                "Caps Lock",
+                "Num Lock",
+                "Scroll Lock",
+                "Layer 0",
+                "Layer 1",
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "On",
+                "Off"
+              ],
+              "content": [
+                "id_dip_led_mode[4]",
+                0,
+                6,
+                4
               ]
             }
           ]
