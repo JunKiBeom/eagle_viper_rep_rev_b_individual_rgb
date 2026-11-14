@@ -6,6 +6,14 @@ QMK/VIA firmware for the **Eagle/Viper REP Rev B**. VIA can set the color and br
 
 The original keyboard source was created by [4pplet](https://github.com/4pplet). This repository contains a modified Rev B version.
 
+## Motivation and goals
+
+This firmware was modified from the original Eagle/Viper REP Rev B source using **Codex with GPT-6 Sol**.
+
+I wanted to change LED colors individually, as I could with 02D's **Snow Tool**. I also needed an alternative to the 02D **Snow-Pro PCB**, which has been discontinued and is no longer supported, making maintenance difficult. I chose the Eagle/Viper REP Rev B because I consider it a strong replacement for that purpose.
+
+The goal is to offer similar flexibility and ease of use **without a separate dedicated application**. The LED colors and indicator behavior can be controlled through **QMK/VIA**, tools widely used with modern custom keyboards.
+
 ## Repository layout
 
 | Folder | Contents |

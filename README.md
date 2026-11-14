@@ -6,6 +6,14 @@ Eagle/Viper REP **Rev B**용 QMK/VIA 펌웨어입니다. 하단 RGB LED 16개의
 
 원본 키보드 소스의 저작권 및 기여자는 [4pplet](https://github.com/4pplet)입니다. 이 저장소는 Rev B용 수정본입니다.
 
+## 제작 배경과 목표
+
+이 펌웨어는 **Codex의 GPT-6 Sol**을 사용해 원본 Eagle/Viper REP Rev B 펌웨어를 수정했습니다.
+
+02D의 **Snow Tool**처럼 LED 색상을 하나씩 변경하고 싶었습니다. 또한 단종되고 지원이 종료되어 유지보수가 어려운 02D **Snow-Pro PCB**를 대체할 보드가 필요했습니다. Eagle/Viper REP Rev B를 그 용도에 적합한 우수한 대체품으로 판단해 이 프로젝트를 시작했습니다.
+
+목표는 Snow Tool과 비슷한 설정 자유도와 사용성을 **별도 전용 프로그램 없이** 제공하는 것입니다. 최근 커스텀 키보드에서 널리 사용하는 **QMK/VIA**를 통해 LED 색상과 표시등 동작을 쉽게 제어할 수 있도록 했습니다.
+
 ## 파일 구성
 
 | 폴더 | 내용 |
